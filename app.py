@@ -1,4 +1,3 @@
-from crypt import methods
 import os
 import sys
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
@@ -13,7 +12,7 @@ app = Flask(__name__)
 Bootstrap(app)
 app.config['SECRET_KEY'] = 'secretkey123'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://qceyghxggjkyrm:7c39ae324a34c9fd337d8ee1243a79b7ae12ca8392a661282cc5bb926b9088d3@ec2-44-199-22-207.compute-1.amazonaws.com:5432/d10pjdf7sfslvo'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:diez203040@localhost:5432/udacity'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///udacity'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
