@@ -83,24 +83,25 @@
   <div class="text-bg-dark p-3">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-2">
-          <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><h3 class="offcanvas-title" id="offcanvasScrollingLabel">Menu Principal</h3></button>
-
-          <div class="offcanvas offcanvas-start bg-dark" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" style="width: 267px">
-            <div class="offcanvas-header">
-              <button class="btn btn-dark" type="button" data-bs-dismiss="offcanvas"><h3 class="offcanvas-title" id="offcanvasScrollingLabel" style="margin-left: 0.5em;">Menu Principal</h3></button>
+        <div class="col-1">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+            <img src="https://pubertaet.lehrer-online.de/typo3conf/ext/lo_core/Resources/Public/Icons/hamburger.png" height="30" width="30"/>
+          </button>
+          <div class="offcanvas offcanvas-bottom bg-dark" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: 125px">
+            <div class="offcanvas-header" style="height: 1px">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-              <a class="btn btn-outline-light" href="#" style="font-size: 20px; margin-left: 3em;">Recibidos</a><br><br><br>
-              <a class="btn btn-outline-light" href="#" style="font-size: 20px; margin-left: 3em;">Enviados</a><br><br><br>
-              <a class="btn btn-outline-light" href="#" style="font-size: 20px; margin-left: 3em;">Supervisores</a><br><br><br>
-              <a class="btn btn-outline-light" href="#" style="font-size: 20px; margin-left: 3em;">Hospitales</a>
+            <div class="offcanvas-body container-fluid" style="text-align:center">
+              <a class="btn btn-outline-light" href="#" style="font-size: 15px; margin-right: 0.3em; margin-bottom: 0.5em;">Recibidos</a>
+              <a class="btn btn-outline-light" href="#" style="font-size: 15px; margin-right: 0.3em; margin-bottom: 0.5em;">Enviados</a>
+              <a class="btn btn-outline-light" href="#" style="font-size: 15px; margin-right: 0.3em; margin-bottom: 0.5em;">Supervisores</a>
+              <a class="btn btn-outline-light" href="#" style="font-size: 15px; margin-right: 0.3em; margin-bottom: 0.5em;">Hospitales</a>
             </div>
           </div>
           
         </div>
 
-          <div class="col-8 container-fluid" style="margin-left: 2em;">
+          <div class="col-10 container-fluid">
             
             <div class="border-start">
             <div class="border-end">
