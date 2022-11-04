@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+
+{% block title %}
+Creacion de Datos
+{% endblock %} 
+
+{% block content %}
+<div class="container-fluid">
+    <h1>AGREGAR DATOS PARA HOSPITALES</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+
+        <ul>
+            {% for message in messages %}
+            <li><strong>{{message}}</strong></li>
+            {% endfor %}
+
+        </ul>
+        {% endif %} 
+    {% endwith %} 
+</br>
+    <form action="{{url_for('creation_hospitals')}}" method="POST">
+        <d1>
+            {{ form.csrf_token }}
+            {{ wtf.form_field(form.hospital, placeholder='Hospital') }}
+            {{ wtf.form_field(form.zona) }}
+            <input type="submit" class="btn btn-primary btn-lg active" value="Agregar">  
+            <a href="{{url_for('creation_hospitals')}}" class="btn btn-default btn-lg active">Cancel</a>
+        </d1>
+    </form>
+
+    <h3><a href="{{url_for('data_creation')}}">Volver a Pagina Principal</a></h3>
+</div>
+{% endblock %} 

@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+
+{% block title %}
+Creacion de Datos
+{% endblock %} 
+
+{% block content %}
+<div class="container">
+    <h1>AGREGAR DATOS PARA HOSPITALES</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+
+        <ul>
+            {% for message in messages %}
+            <li><strong>{{message}}</strong></li>
+            {% endfor %}
+
+        </ul>
+        {% endif %} 
+    {% endwith %} 
+</br>
+    <form action="{{url_for('inicio_de_sesion')}}" method="POST">
+        <d1>
+            {{ form.csrf_token }}
+            {{ wtf.form_field(form.usuario, placeholder='32489') }}
+            {{ wtf.form_field(form.password) }}
+            <input type="submit" class="btn btn-dark" value="Iniciar Sesion">  
+        </d1>
+    </form>
+
+    <h3><a href="#">Crear Nuevo Usuario</a></h3>
+    
+</div>
+{% endblock %} 

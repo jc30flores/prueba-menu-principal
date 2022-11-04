@@ -1,0 +1,13 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+
+{% block title %}
+Creacion de Datos
+{% endblock %} 
+{% block content %}
+<div claass="container">
+    <h1>CREACION DE DATOS</h1>
+    <h2><a href="{{url_for('data_creation')}}">Creacion de Datos</a></h2>
+    <h2><a href="{{url_for('inicio_de_sesion')}}">Inicio de Sesion</a></h2>
+</div>
+{% endblock %} 
