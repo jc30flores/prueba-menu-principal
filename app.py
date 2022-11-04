@@ -1030,8 +1030,8 @@ class Agenda_Formularios(Base):
             'estado': self.estado
         }
 
-with app.app_context():
-    db.create_all()
+#with app.app_context():
+#    db.create_all()
 session = db.session
 
 @app.route("/")
