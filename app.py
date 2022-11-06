@@ -1,3 +1,4 @@
+from crypt import methods
 import os
 import sys
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
@@ -12,7 +13,7 @@ app = Flask(__name__)
 Bootstrap(app)
 app.config['SECRET_KEY'] = 'secretkey123'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://qceyghxggjkyrm:7c39ae324a34c9fd337d8ee1243a79b7ae12ca8392a661282cc5bb926b9088d3@ec2-44-199-22-207.compute-1.amazonaws.com:5432/d10pjdf7sfslvo'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///new_table.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:diez203040@localhost:5432/udacity'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -1031,7 +1032,7 @@ class Agenda_Formularios(Base):
         }
 
 #with app.app_context():
-#    db.create_all()
+ #   db.create_all()
 session = db.session
 
 @app.route("/")
@@ -1126,7 +1127,25 @@ def inicio_de_sesion():
 
 @app.route('/hospital-project/inicio de sesion/SS_Superior_inicio_page', methods=['GET', 'POST'])
 def SS_superior_inicio_page():
-    return render_template('SS_superior_inicio_page.html')
+    return render_template('/SS_superior/SS_superior_inicio_page.html')
+
+@app.route('/hospital-project/inicio de sesion/SS_Superior_enviados_principal', methods=['GET', 'POST'])
+def SS_superior_enviados_principal():
+    return render_template('/SS_superior/SS_superior_enviados_principal.html')
+
+
+@app.route('/hospital-project/inicio de sesion/SS_Superior_supervisores', methods=['GET', 'POST'])
+def SS_superior_supervisores():
+    return render_template('/SS_superior/SS_superior_supervisores.html')
+
+
+@app.route('/hospital-project/inicio de sesion/SS_Superior_hospitales', methods=['GET', 'POST'])
+def SS_superior_hospitales():
+    return render_template('/SS_superior/SS_superior_hospitales.html')
+
+
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0', port=8080)
